@@ -1,6 +1,6 @@
 {
-  "last_node_id": 57,
-  "last_link_id": 103,
+  "last_node_id": 116,
+  "last_link_id": 204,
   "nodes": [
     {
       "id": 14,
@@ -14,7 +14,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 4,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -42,6 +42,155 @@
       ]
     },
     {
+      "id": 84,
+      "type": "Note",
+      "pos": [
+        209,
+        358
+      ],
+      "size": {
+        "0": 235.1999969482422,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "title": "Best values for video_frames",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "svd_xt -> video_frames = 25\nsvd -> video_frames = 14"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 85,
+      "type": "PrimitiveNode",
+      "pos": [
+        235,
+        448
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            147
+          ],
+          "widget": {
+            "name": "video_frames"
+          }
+        }
+      ],
+      "title": "video_frames",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        25,
+        "fixed"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "RIFE VFI",
+      "pos": [
+        1475,
+        224
+      ],
+      "size": {
+        "0": 443.4000244140625,
+        "1": 198
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 106
+        },
+        {
+          "name": "optional_interpolation_states",
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            110
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RIFE VFI"
+      },
+      "widgets_values": [
+        "rife47.pth",
+        10,
+        2,
+        false,
+        true,
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1208,
+        283
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            106,
+            188
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
       "id": 12,
       "type": "SVD_img2vid_Conditioning",
       "pos": [
@@ -53,7 +202,7 @@
         "1": 218
       },
       "flags": {},
-      "order": 5,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -64,7 +213,7 @@
         {
           "name": "init_image",
           "type": "IMAGE",
-          "link": 102,
+          "link": 201,
           "slot_index": 1
         },
         {
@@ -75,7 +224,7 @@
         {
           "name": "width",
           "type": "INT",
-          "link": 59,
+          "link": 203,
           "widget": {
             "name": "width"
           }
@@ -83,10 +232,19 @@
         {
           "name": "height",
           "type": "INT",
-          "link": 58,
+          "link": 204,
           "widget": {
             "name": "height"
           }
+        },
+        {
+          "name": "video_frames",
+          "type": "INT",
+          "link": 147,
+          "widget": {
+            "name": "video_frames"
+          },
+          "slot_index": 5
         }
       ],
       "outputs": [
@@ -122,145 +280,20 @@
         "Node name for S&R": "SVD_img2vid_Conditioning"
       },
       "widgets_values": [
-        920,
-        576,
-        14,
+        736,
+        736,
+        25,
         127,
         6,
         0
       ]
     },
     {
-      "id": 15,
-      "type": "ImageOnlyCheckpointLoader",
-      "pos": [
-        74,
-        228
-      ],
-      "size": {
-        "0": 369.6000061035156,
-        "1": 98
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            23
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP_VISION",
-          "type": "CLIP_VISION",
-          "links": [
-            24
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            25,
-            26
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageOnlyCheckpointLoader"
-      },
-      "widgets_values": [
-        "temp-models/svd-fp16.safetensors"
-      ]
-    },
-    {
-      "id": 32,
-      "type": "PrimitiveNode",
-      "pos": [
-        -166,
-        629
-      ],
-      "size": {
-        "0": 210,
-        "1": 82
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            58
-          ],
-          "widget": {
-            "name": "height"
-          },
-          "slot_index": 0
-        }
-      ],
-      "title": "HEIGHT",
-      "properties": {},
-      "widgets_values": [
-        576,
-        "fixed"
-      ]
-    },
-    {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        1207.799932861331,
-        375.6999450683598
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 7
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 26
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            103
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
-    {
-      "id": 56,
+      "id": 114,
       "type": "LoadImage",
       "pos": [
-        76,
-        396
+        -371,
+        242
       ],
       "size": {
         "0": 315,
@@ -274,7 +307,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            102
+            201
           ],
           "shape": 3,
           "slot_index": 0
@@ -290,63 +323,29 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "snowman.png",
+        "ComfyUI_00227_.png",
         "image"
-      ]
-    },
-    {
-      "id": 31,
-      "type": "PrimitiveNode",
-      "pos": [
-        -166,
-        490
-      ],
-      "size": {
-        "0": 210,
-        "1": 82
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            59
-          ],
-          "widget": {
-            "name": "width"
-          },
-          "slot_index": 0
-        }
-      ],
-      "title": "WIDTH",
-      "properties": {},
-      "widgets_values": [
-        920,
-        "fixed"
       ]
     },
     {
       "id": 57,
       "type": "VHS_VideoCombine",
       "pos": [
-        1494,
-        227
+        1946,
+        224
       ],
       "size": [
-        504.3617099609378,
-        502.99167927989146
+        801.6981811523438,
+        977.6981811523438
       ],
       "flags": {},
-      "order": 8,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 103
+          "link": 110
         }
       ],
       "outputs": [],
@@ -354,20 +353,20 @@
         "Node name for S&R": "VHS_VideoCombine"
       },
       "widgets_values": {
-        "frame_rate": 8,
+        "frame_rate": 16,
         "loop_count": 0,
-        "filename_prefix": "Anim",
+        "filename_prefix": "AnimateDiff",
         "format": "video/h264-mp4",
-        "pingpong": true,
-        "save_image": false,
+        "pingpong": false,
+        "save_image": true,
         "crf": 20,
         "videopreview": {
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "Anim_00004.mp4",
+            "filename": "AnimateDiff_00005.mp4",
             "subfolder": "",
-            "type": "temp",
+            "type": "output",
             "format": "video/h264-mp4"
           }
         }
@@ -377,15 +376,15 @@
       "id": 3,
       "type": "KSampler",
       "pos": [
-        867.7999328613287,
-        375.6999450683598
+        851,
+        278
       ],
       "size": {
         "0": 315,
-        "1": 262
+        "1": 474
       },
       "flags": {},
-      "order": 6,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -423,13 +422,181 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        243801765684449,
+        967842687682330,
         "randomize",
-        25,
+        30,
         2.5,
-        "euler_ancestral",
-        "simple",
+        "dpmpp_2s_ancestral",
+        "ddim_uniform",
         1
+      ]
+    },
+    {
+      "id": 115,
+      "type": "PrimitiveNode",
+      "pos": [
+        -368,
+        604
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            203
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "width"
+          }
+        }
+      ],
+      "title": "WIDTH",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        736,
+        "fixed"
+      ]
+    },
+    {
+      "id": 116,
+      "type": "PrimitiveNode",
+      "pos": [
+        -140,
+        606
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            204
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "title": "HEIGHT",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        736,
+        "fixed"
+      ]
+    },
+    {
+      "id": 110,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1421,
+        523
+      ],
+      "size": [
+        503.3995361328125,
+        679.3995361328125
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 188
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pingpong": true,
+        "save_image": false,
+        "crf": 20,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00004.mp4",
+            "subfolder": "",
+            "type": "temp",
+            "format": "video/h264-mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 15,
+      "type": "ImageOnlyCheckpointLoader",
+      "pos": [
+        75,
+        228
+      ],
+      "size": {
+        "0": 369.6000061035156,
+        "1": 98
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            23
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            24
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            25,
+            26
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageOnlyCheckpointLoader"
+      },
+      "widgets_values": [
+        "svd_xt-fp16.safetensors"
       ]
     }
   ],
@@ -507,36 +674,60 @@
       "CONDITIONING"
     ],
     [
-      58,
-      32,
+      106,
+      8,
       0,
-      12,
-      4,
-      "INT"
-    ],
-    [
       59,
-      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      110,
+      59,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      147,
+      85,
       0,
       12,
-      3,
+      5,
       "INT"
     ],
     [
-      102,
-      56,
+      188,
+      8,
+      0,
+      110,
+      0,
+      "IMAGE"
+    ],
+    [
+      201,
+      114,
       0,
       12,
       1,
       "IMAGE"
     ],
     [
-      103,
-      8,
+      203,
+      115,
       0,
-      57,
+      12,
+      3,
+      "INT"
+    ],
+    [
+      204,
+      116,
       0,
-      "IMAGE"
+      12,
+      4,
+      "INT"
     ]
   ],
   "groups": [

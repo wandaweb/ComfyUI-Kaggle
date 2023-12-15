@@ -1,0 +1,1699 @@
+{
+  "last_node_id": 114,
+  "last_link_id": 202,
+  "nodes": [
+    {
+      "id": 14,
+      "type": "VideoLinearCFGGuidance",
+      "pos": [
+        487.799932861328,
+        265.6999450683599
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            39
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VideoLinearCFGGuidance"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 65,
+      "type": "Int to float",
+      "pos": [
+        -70,
+        900
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "INT",
+          "link": 142,
+          "widget": {
+            "name": "Value"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            111,
+            123,
+            125
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Width as float",
+      "properties": {
+        "Node name for S&R": "Int to float"
+      },
+      "widgets_values": [
+        1344
+      ]
+    },
+    {
+      "id": 66,
+      "type": "Int to float",
+      "pos": [
+        -80,
+        1020
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "INT",
+          "link": 143,
+          "widget": {
+            "name": "Value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            112,
+            121,
+            126
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Height as float",
+      "properties": {
+        "Node name for S&R": "Int to float"
+      },
+      "widgets_values": [
+        768
+      ]
+    },
+    {
+      "id": 67,
+      "type": "Float",
+      "pos": [
+        -69,
+        649
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            114,
+            120
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Max-res",
+      "properties": {
+        "Node name for S&R": "Float"
+      },
+      "widgets_values": [
+        589824
+      ]
+    },
+    {
+      "id": 70,
+      "type": "Multiply",
+      "pos": [
+        185,
+        1031
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value_A",
+          "type": "FLOAT",
+          "link": 120,
+          "widget": {
+            "name": "Value_A"
+          }
+        },
+        {
+          "name": "Value_B",
+          "type": "FLOAT",
+          "link": 121,
+          "widget": {
+            "name": "Value_B"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            122
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Max-res x Heght",
+      "properties": {
+        "Node name for S&R": "Multiply"
+      },
+      "widgets_values": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 63,
+      "type": "Multiply",
+      "pos": [
+        193,
+        904
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value_A",
+          "type": "FLOAT",
+          "link": 111,
+          "widget": {
+            "name": "Value_A"
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "Value_B",
+          "type": "FLOAT",
+          "link": 112,
+          "widget": {
+            "name": "Value_B"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            113
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Width x Height",
+      "properties": {
+        "Node name for S&R": "Multiply"
+      },
+      "widgets_values": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 83,
+      "type": "Note",
+      "pos": [
+        -68,
+        740
+      ],
+      "size": {
+        "0": 235.7027130126953,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "title": "Note - default resolution",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Default value is 576 x 1024 = 589824"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 84,
+      "type": "Note",
+      "pos": [
+        209,
+        358
+      ],
+      "size": {
+        "0": 235.1999969482422,
+        "1": 58
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "title": "Best values for video_frames",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "svd_xt -> video_frames = 25\nsvd -> video_frames = 14"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 85,
+      "type": "PrimitiveNode",
+      "pos": [
+        235,
+        448
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            147
+          ],
+          "widget": {
+            "name": "video_frames"
+          }
+        }
+      ],
+      "title": "video_frames",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        25,
+        "fixed"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "RIFE VFI",
+      "pos": [
+        1475,
+        224
+      ],
+      "size": {
+        "0": 443.4000244140625,
+        "1": 198
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 106
+        },
+        {
+          "name": "optional_interpolation_states",
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            110
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RIFE VFI"
+      },
+      "widgets_values": [
+        "rife47.pth",
+        10,
+        2,
+        false,
+        true,
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1208,
+        283
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            106,
+            188
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 110,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1267,
+        524
+      ],
+      "size": [
+        503.3995361328125,
+        476.51402064732144
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 188
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pingpong": true,
+        "save_image": false,
+        "crf": 20,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00001.mp4",
+            "subfolder": "",
+            "type": "temp",
+            "format": "video/h264-mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 71,
+      "type": "Divide",
+      "pos": [
+        438,
+        1029
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Numerator",
+          "type": "FLOAT",
+          "link": 122,
+          "widget": {
+            "name": "Numerator"
+          }
+        },
+        {
+          "name": "Denominator",
+          "type": "FLOAT",
+          "link": 123,
+          "widget": {
+            "name": "Denominator"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            124
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Divide"
+      },
+      "widgets_values": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 72,
+      "type": "Square root",
+      "pos": [
+        608,
+        1030
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "FLOAT",
+          "link": 124,
+          "widget": {
+            "name": "Value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            128,
+            129
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Square root -> Video-Height",
+      "properties": {
+        "Node name for S&R": "Square root"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 74,
+      "type": "Multiply",
+      "pos": [
+        617,
+        1128
+      ],
+      "size": {
+        "0": 386.3999938964844,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value_A",
+          "type": "FLOAT",
+          "link": 127,
+          "widget": {
+            "name": "Value_A"
+          }
+        },
+        {
+          "name": "Value_B",
+          "type": "FLOAT",
+          "link": 128,
+          "widget": {
+            "name": "Value_B"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            130
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "(Width / Height) * Video-Height -> Video-Width",
+      "properties": {
+        "Node name for S&R": "Multiply"
+      },
+      "widgets_values": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 73,
+      "type": "Divide",
+      "pos": [
+        187,
+        1133
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Numerator",
+          "type": "FLOAT",
+          "link": 125,
+          "widget": {
+            "name": "Numerator"
+          }
+        },
+        {
+          "name": "Denominator",
+          "type": "FLOAT",
+          "link": 126,
+          "widget": {
+            "name": "Denominator"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            127
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Width / Height",
+      "properties": {
+        "Node name for S&R": "Divide"
+      },
+      "widgets_values": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 12,
+      "type": "SVD_img2vid_Conditioning",
+      "pos": [
+        487.799932861328,
+        395.6999450683598
+      ],
+      "size": {
+        "0": 315,
+        "1": 218
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 24
+        },
+        {
+          "name": "init_image",
+          "type": "IMAGE",
+          "link": 201,
+          "slot_index": 1
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 25
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 198,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 199,
+          "widget": {
+            "name": "height"
+          }
+        },
+        {
+          "name": "video_frames",
+          "type": "INT",
+          "link": 147,
+          "widget": {
+            "name": "video_frames"
+          },
+          "slot_index": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            40
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            17
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            18
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SVD_img2vid_Conditioning"
+      },
+      "widgets_values": [
+        736,
+        736,
+        25,
+        127,
+        6,
+        0
+      ]
+    },
+    {
+      "id": 76,
+      "type": "Floor",
+      "pos": [
+        968,
+        1129
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "FLOAT",
+          "link": 130,
+          "widget": {
+            "name": "Value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            194
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Video-Width",
+      "properties": {
+        "Node name for S&R": "Floor"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 75,
+      "type": "Floor",
+      "pos": [
+        871,
+        1030
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "FLOAT",
+          "link": 129,
+          "widget": {
+            "name": "Value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            193
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Video-Height",
+      "properties": {
+        "Node name for S&R": "Floor"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 64,
+      "type": "Compare",
+      "pos": [
+        433,
+        915
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "*",
+          "link": 113
+        },
+        {
+          "name": "b",
+          "type": "*",
+          "link": 114,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "B",
+          "type": "BOOLEAN",
+          "links": [
+            117
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Compare"
+      },
+      "widgets_values": [
+        "a <= b"
+      ]
+    },
+    {
+      "id": 112,
+      "type": "Int to tuple",
+      "pos": [
+        614,
+        1181
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value_A",
+          "type": "INT",
+          "link": 194,
+          "widget": {
+            "name": "Value_A"
+          }
+        },
+        {
+          "name": "Value_B",
+          "type": "INT",
+          "link": 193,
+          "widget": {
+            "name": "Value_B"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "TUPLE",
+          "type": "TUPLE",
+          "links": [
+            195
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Int to tuple"
+      },
+      "widgets_values": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 68,
+      "type": "If ANY execute A else B",
+      "pos": [
+        617,
+        896
+      ],
+      "size": {
+        "0": 210,
+        "1": 66
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ANY",
+          "type": "*",
+          "link": 117
+        },
+        {
+          "name": "IF_TRUE",
+          "type": "*",
+          "link": 196,
+          "slot_index": 1
+        },
+        {
+          "name": "IF_FALSE",
+          "type": "*",
+          "link": 195
+        }
+      ],
+      "outputs": [
+        {
+          "name": "?",
+          "type": "*",
+          "links": [
+            197
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "If ANY execute A else B"
+      }
+    },
+    {
+      "id": 113,
+      "type": "Tuple to ints",
+      "pos": [
+        863,
+        898
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Tuple",
+          "type": "TUPLE",
+          "link": 197
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            198
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            199
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Tuple to ints"
+      }
+    },
+    {
+      "id": 82,
+      "type": "Get image size",
+      "pos": [
+        -355,
+        896
+      ],
+      "size": {
+        "0": 210,
+        "1": 66
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 202,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            142
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            143
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "TUPLE",
+          "type": "TUPLE",
+          "links": [
+            196
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Get image size"
+      }
+    },
+    {
+      "id": 114,
+      "type": "LoadImage",
+      "pos": [
+        -371,
+        242
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            201,
+            202
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_00227_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1946,
+        224
+      ],
+      "size": [
+        801.6981811523438,
+        646.9703892299108
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 110
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 16,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pingpong": false,
+        "save_image": true,
+        "crf": 20,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00002.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 15,
+      "type": "ImageOnlyCheckpointLoader",
+      "pos": [
+        75,
+        228
+      ],
+      "size": {
+        "0": 369.6000061035156,
+        "1": 98
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            23
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            24
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            25,
+            26
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageOnlyCheckpointLoader"
+      },
+      "widgets_values": [
+        "svd_xt-fp16.safetensors"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        851,
+        278
+      ],
+      "size": {
+        "0": 315,
+        "1": 474
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 39
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 40
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 17
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        1047080991057307,
+        "randomize",
+        30,
+        2.5,
+        "dpm_2_ancestral",
+        "ddim_uniform",
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      17,
+      12,
+      1,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      12,
+      2,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      23,
+      15,
+      0,
+      14,
+      0,
+      "MODEL"
+    ],
+    [
+      24,
+      15,
+      1,
+      12,
+      0,
+      "CLIP_VISION"
+    ],
+    [
+      25,
+      15,
+      2,
+      12,
+      2,
+      "VAE"
+    ],
+    [
+      26,
+      15,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      39,
+      14,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      40,
+      12,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      106,
+      8,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      110,
+      59,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      111,
+      65,
+      0,
+      63,
+      0,
+      "FLOAT"
+    ],
+    [
+      112,
+      66,
+      0,
+      63,
+      1,
+      "FLOAT"
+    ],
+    [
+      113,
+      63,
+      0,
+      64,
+      0,
+      "*"
+    ],
+    [
+      114,
+      67,
+      0,
+      64,
+      1,
+      "*"
+    ],
+    [
+      117,
+      64,
+      0,
+      68,
+      0,
+      "*"
+    ],
+    [
+      120,
+      67,
+      0,
+      70,
+      0,
+      "FLOAT"
+    ],
+    [
+      121,
+      66,
+      0,
+      70,
+      1,
+      "FLOAT"
+    ],
+    [
+      122,
+      70,
+      0,
+      71,
+      0,
+      "FLOAT"
+    ],
+    [
+      123,
+      65,
+      0,
+      71,
+      1,
+      "FLOAT"
+    ],
+    [
+      124,
+      71,
+      0,
+      72,
+      0,
+      "FLOAT"
+    ],
+    [
+      125,
+      65,
+      0,
+      73,
+      0,
+      "FLOAT"
+    ],
+    [
+      126,
+      66,
+      0,
+      73,
+      1,
+      "FLOAT"
+    ],
+    [
+      127,
+      73,
+      0,
+      74,
+      0,
+      "FLOAT"
+    ],
+    [
+      128,
+      72,
+      0,
+      74,
+      1,
+      "FLOAT"
+    ],
+    [
+      129,
+      72,
+      0,
+      75,
+      0,
+      "FLOAT"
+    ],
+    [
+      130,
+      74,
+      0,
+      76,
+      0,
+      "FLOAT"
+    ],
+    [
+      142,
+      82,
+      0,
+      65,
+      0,
+      "INT"
+    ],
+    [
+      143,
+      82,
+      1,
+      66,
+      0,
+      "INT"
+    ],
+    [
+      147,
+      85,
+      0,
+      12,
+      5,
+      "INT"
+    ],
+    [
+      188,
+      8,
+      0,
+      110,
+      0,
+      "IMAGE"
+    ],
+    [
+      193,
+      75,
+      0,
+      112,
+      1,
+      "INT"
+    ],
+    [
+      194,
+      76,
+      0,
+      112,
+      0,
+      "INT"
+    ],
+    [
+      195,
+      112,
+      0,
+      68,
+      2,
+      "*"
+    ],
+    [
+      196,
+      82,
+      2,
+      68,
+      1,
+      "*"
+    ],
+    [
+      197,
+      68,
+      0,
+      113,
+      0,
+      "TUPLE"
+    ],
+    [
+      198,
+      113,
+      0,
+      12,
+      3,
+      "INT"
+    ],
+    [
+      199,
+      113,
+      1,
+      12,
+      4,
+      "INT"
+    ],
+    [
+      201,
+      114,
+      0,
+      12,
+      1,
+      "IMAGE"
+    ],
+    [
+      202,
+      114,
+      0,
+      82,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Image to Video",
+      "bounding": [
+        478,
+        192,
+        954,
+        478
+      ],
+      "color": "#8A8",
+      "font_size": 24
+    },
+    {
+      "title": "Scale Image to Max-res",
+      "bounding": [
+        -90,
+        826,
+        1222,
+        450
+      ],
+      "color": "#444",
+      "font_size": 24
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
